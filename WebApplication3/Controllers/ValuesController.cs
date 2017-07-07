@@ -14,6 +14,9 @@ namespace WebApplication3.Controllers
         {
             if (this.TryValidateModel(value) == false)
                 throw new Exception();
+                
+            if (this.ModelState.IsValid == false)
+                throw new Exception();
 
             return this.BadRequest(this.ModelState);
         }

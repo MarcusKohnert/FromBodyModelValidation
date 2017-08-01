@@ -13,6 +13,7 @@ namespace WebApplication3
         {
             services
                 .AddMvcCore()
+                .AddDataAnnotations()
                 .AddJsonFormatters();
         }
 
